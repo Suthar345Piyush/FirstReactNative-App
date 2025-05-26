@@ -11,7 +11,9 @@ const Home = () => {
 
       <Text style={{marginBottom : 30 , marginTop : 10}}>Reading List App</Text>
      
-     <Link href="/about">About Page</Link>
+     <Link href="/about" style={styles.link}>To About Page</Link>
+
+     <Link href="/contact" style={styles.link}>To contact Page </Link>
       
     </View>
   )
@@ -35,7 +37,13 @@ const styles = StyleSheet.create({
 
     img : {
        marginVertical : 20,
+    },
+
+    link : {
+       marginVertical : 10,
+       borderBottomWidth : 1,
     }
+
 })
 
 

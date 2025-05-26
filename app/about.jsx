@@ -6,9 +6,14 @@ const About = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>This is About Page</Text>
+
+
+      <Link href="/" style={styles.link}>Back To Home</Link>
+
+      <Link href="/contact" style={styles.link}>To contact page</Link>
     </View>
   )
-}
+} 
  
 export default About
 
@@ -23,4 +28,8 @@ const styles = StyleSheet.create({
     fontWeight : 'bold',
     fontSize : 18
    },
+  link : {
+    marginVertical : 10,
+    borderBottomWidth : 1
+  }
 })
