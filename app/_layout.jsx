@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View, useColorScheme } from 'react-native'
+import { StyleSheet,   useColorScheme } from 'react-native'
 import React from 'react'
 import { Stack } from 'expo-router';
 import { Colors } from "../constants/Colors";
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'react-native';
 
 const RootLayout = () => {
   const colorScheme = useColorScheme()
@@ -15,9 +15,13 @@ const RootLayout = () => {
        headerStyle : { backgroundColor : theme.navBackground},
        headerTintColor : theme.title,
     }}>
+
+
+  // to remove the (auth) from heading
+
+      <Stack.Screen name= "(auth)" options={{headerShown : false}}/>
+
       <Stack.Screen name="index" options={{ title : 'Home'}}/>
-       <Stack.Screen name="about" options={{title : 'About'}}/>
-       <Stack.Screen name="contact" options={{title : 'Contact'}}/>
     </Stack> 
   </>
   )
